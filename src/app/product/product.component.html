@@ -3,4 +3,9 @@
 <!-- {{products.id}}-->
 <br><br>
 <hr>
+<div *ngFor="let pro of products">
+    {{pro | json}}
+    <br>
+    <hr>
+</div>
 {{products?.description}} 

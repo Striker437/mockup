@@ -10,13 +10,13 @@ import { Product } from '../Models/Model';
 export class ProductComponent implements OnInit {
 
   constructor(private api_service:ApiserviceService) { }
-  products:Product;
+  products:Product[];
   ngOnInit() {
     this.api_service.getProducts().subscribe(
       (response =>{
         console.log(response);
         let product = response;
-        this.products = product[0];
+        this.products = product;
       }),
       (error=>{
         alert('Api not working');
